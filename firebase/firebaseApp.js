@@ -5,15 +5,14 @@ import { getFirestore } from "firebase/firestore";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
-console.log(process.env.NEXT_PUBLIC_API_KEY);
 
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_API_KEY,
-  authDomain: "remapp-aef97.firebaseapp.com",
-  projectId: "remapp-aef97",
-  storageBucket: "remapp-aef97.appspot.com",
-  messagingSenderId: "269298844083",
-  appId: "1:269298844083:web:1f8848295debadc24c0bc6",
+  authDomain: process.env.NEXT_PUBLIC_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_STORAGE_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_MESSAGING_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_APP_ID,
 };
 
 export const app = initializeApp(firebaseConfig);
